@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at top, #020617 0, #000000 55%);
+}
+
+/* Scrollbar styling (optional cyber touch) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #22d3ee, #a855f7);
+  border-radius: 999px;
+}
+
+/* Make the particle canvas sit under everything but above body bg */
+#cyber-particles {
+  z-index: 0;
+}
+
+/* --- Neon cube styles for About page --- */
+
+.cube-orbit {
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  animation: cube-orbit 18s ease-in-out infinite;
+}
+
+/* === Animated keyboard on About page === */
+
+@keyframes white-key-press {
+  0%,
+  70%,
+  100% {
+    transform: translateY(0);
+    filter: brightness(1) saturate(1);
+    box-shadow: 0 0 0 rgba(56, 189, 248, 0);
+  }
+  14%,
+  22% {
+    transform: translateY(3px);
+    filter: brightness(1.4) saturate(1.3);
+    box-shadow:
+      0 0 10px rgba(56, 189, 248, 0.6),
+      0 0 22px rgba(56, 189, 248, 0.35);
+  }
+}
+
+@keyframes black-key-press {
+  0%,
+  75%,
+  100% {
+    transform: translateY(0);
+    filter: brightness(1) saturate(1);
+    box-shadow:
+      0 0 0 rgba(129, 140, 248, 0),
+      0 0 0 rgba(236, 72, 153, 0);
+  }
+  18%,
+  26% {
+    transform: translateY(4px);
+    filter: brightness(1.6) saturate(1.4);
+    box-shadow:
+      0 0 14px rgba(129, 140, 248, 0.9),
+      0 0 26px rgba(236, 72, 153, 0.8);
+  }
+}
+
+.key-white {
+  animation: white-key-press 3.4s ease-in-out infinite;
+  transform-origin: top;
+}
+
+.key-black {
+  animation: black-key-press 2.8s ease-in-out infinite;
+  transform-origin: top;
+}
+
+.w-custom {
+    width: 90vw;
+}
