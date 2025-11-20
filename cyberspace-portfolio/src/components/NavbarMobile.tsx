@@ -13,6 +13,7 @@ export default function NavbarMobile() {
         <Link
           href="/"
           className="font-semibold tracking-[0.25em] text-xs uppercase bg-linear-to-r from-cyan-400 to-fuchsia-500 bg-clip-text text-transparent"
+          onClick={() => setOpen(false)}  // also close when clicking logo
         >
           KUSH
         </Link>
@@ -29,7 +30,6 @@ export default function NavbarMobile() {
         </button>
       </div>
 
-      {/* MENU */}
       <AnimatePresence>
         {open && (
           <motion.nav
@@ -38,9 +38,9 @@ export default function NavbarMobile() {
             exit={{ opacity: 0, y: -15 }}
             className="flex flex-col gap-4 px-6 pb-6 text-sm text-zinc-300"
           >
-            <MobileNavLink href="/" label="Home" />
-            <MobileNavLink href="/projects" label="Projects" />
-            <MobileNavLink href="/about" label="About" />
+            <MobileNavLink href="/" label="Home" onClick={() => setOpen(false)} />
+            <MobileNavLink href="/projects" label="Projects" onClick={() => setOpen(false)} />
+            <MobileNavLink href="/about" label="About" onClick={() => setOpen(false)} />
           </motion.nav>
         )}
       </AnimatePresence>
@@ -48,10 +48,19 @@ export default function NavbarMobile() {
   );
 }
 
-function MobileNavLink({ href, label }: { href: string; label: string }) {
+function MobileNavLink({
+  href,
+  label,
+  onClick,
+}: {
+  href: string;
+  label: string;
+  onClick: () => void;
+}) {
   return (
     <Link
       href={href}
+      onClick={onClick}
       className="rounded-md py-1 text-zinc-300 hover:text-cyan-300 hover:bg-zinc-900/60"
     >
       {label}
