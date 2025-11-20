@@ -59,15 +59,11 @@ export const projects: Project[] = [
   {
     slug: "straycare",
     name: "StrayCare",
-    tagline:
-      "Backend + DB + UI for tracking stray animal feeding, vaccination, and community care.",
-    tech: ["Node.js", "Express", "PostgreSQL", "SQL", "HTML", "CSS", "JS"],
+    tagline: "A community-driven platform for tracking, feeding, and caring for stray animals.",
     timeline: "Summer 2025",
-    role: "Backend & schema design",
-    problem:
-      "Model and manage real-world animal/vaccination data with clean constraints and queries.",
-    impact:
-      "Designed a BCNF schema and REST API that keeps data consistent while staying simple to query.",
+    tech: ["Node.js", "Oracle SQL", "Express.js", "Vanilla JS", "Google Plus Codes"],
+    role: "Full-stack engineering, database design, and UI development",
+    caseStudy: "/projects/straycare",
   },
   {
     slug: "smitsartstudio",
@@ -98,7 +94,16 @@ export const projects: Project[] = [
       "Deployed a working prototype and later iterated with better detection and timing logic.",
     caseStudy: "/projects/traffic-control",
   },
-    {
+  {
+    slug: "4ward-thinker",
+    name: "The 4Ward Thinker",
+    tagline: "An affordable, modular robotic meal-serving system built for real-world deployment.",
+    timeline: "March 2023",
+    tech: ["Fusion360", "Mechanical Design", "Robotics", "Sensors", "Mass Manufacturable"],
+    role: "CAD Modeling + Stress Analysis and Circuit Design",
+    caseStudy: "/projects/4ward-thinker",
+  },
+  {
     slug: "fithub",
     name: "FitHub",
     tagline:

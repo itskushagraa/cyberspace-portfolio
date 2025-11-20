@@ -5,12 +5,13 @@ import { Inter } from "next/font/google";
 import CosmicParticleField from "@/components/CosmicParticleField";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import NavbarMobile from "@/components/NavbarMobile";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Kushagra | CyberSpace Portfolio",
-  description: "ML • Cloud • C++ • Distributed Systems • Cyber Themed Portfolio",
+  title: "Kush | Portfolio",
+  description: "",
 };
 
 export default function RootLayout({
@@ -23,8 +24,16 @@ export default function RootLayout({
       <body className={inter.className + " bg-black overflow-x-hidden"}>
         
         <CosmicParticleField />  {/* neon cyberspace background */}
-        
+
+        {/* desktop */}
+        <div className="hidden md:block">
         <Navbar />
+        </div>
+
+        {/* mobile */}
+        <div className="block md:hidden">
+        <NavbarMobile />
+        </div>
 
         <main className="relative z-10">
           {children}
