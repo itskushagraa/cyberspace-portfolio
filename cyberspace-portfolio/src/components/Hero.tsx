@@ -62,7 +62,7 @@ export default function Hero() {
           >
             <p>Computer Science Major</p>
             <p>University of British Columbia</p>
-            <p>3rd Year</p>
+            <p>4th Year</p>
           </motion.div>
         </div>
 

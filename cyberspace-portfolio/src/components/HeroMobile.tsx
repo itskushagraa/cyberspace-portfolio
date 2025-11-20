@@ -53,7 +53,7 @@ export default function HeroMobile() {
       >
         <p>Computer Science Major</p>
         <p>University of British Columbia</p>
-        <p>3rd Year</p>
+        <p>4th Year</p>
       </motion.div>
 
       {/* Tagline */}
@@ -62,9 +62,7 @@ export default function HeroMobile() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Building engines,<br />
-        pipelines,<br />
-        and systems that make sense one step at a time.
+        Building systems.<br/>Training models.<br/>Trying to make lives better.
       </motion.h2>
 
       {/* Buttons */}
